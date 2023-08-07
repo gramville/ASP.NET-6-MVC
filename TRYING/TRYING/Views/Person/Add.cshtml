@@ -1,0 +1,12 @@
+﻿@model TRYING.Models.Person
+
+    @{
+        ViewData["Title"] = "Add person";
+    }
+    <form method="post" asp-action="Add">
+        <input placeholder="name" asp-for="name"/>
+        <input placeholder="age" asp-for="age"/>
+        <input placeholder="description"  asp-for="description"/>
+        <input value="Create" type="submit"/>
+
+    </form>

@@ -1,0 +1,14 @@
+﻿@model TRYING.Models.Person
+
+@{
+    ViewData["Title"] = "Update person";
+}
+
+<form method="post" asp-action="Update">
+    <input asp-for="id" hidden value="@Model.id"/>
+    <input asp-for="name"/>
+    <input asp-for="age"/>
+    <input asp-for="description" />
+    <input value="Update" type ="submit"/>
+
+</form>

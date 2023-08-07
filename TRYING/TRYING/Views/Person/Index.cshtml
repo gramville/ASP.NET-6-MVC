@@ -1,0 +1,19 @@
+﻿@model IEnumerable<TRYING.Models.Person>
+
+@{
+    ViewData["Title"] = "index";
+}
+
+<h1>Welcome</h1>
+<a asp-action ="Add">Add person</a>
+@foreach(var item in Model)
+{
+    <div>
+        <label>@item.id</label>
+        <label>@item.name</label>
+        <label>@item.age</label>
+        <label>@item.description</label>
+        <a asp-action="Update" asp-route-id="@item.id">update</a>
+        <a asp-action="Delete" asp-route-id="@item.id">delete</a>
+    </div>
+}
